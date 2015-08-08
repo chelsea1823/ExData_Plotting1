@@ -6,6 +6,6 @@ data$datetime <- strptime(paste(data$Date, data$Time, sep =" "), format="%d/%m/%
 GlobalActivePower <- as.numeric(data$Global_active_power)
 
 # plot
-png(filename="plot1.png")
+png(filename="plot1.png", width=480, height=480)
 hist(GlobalActivePower, col = 2, main = "Global Active Power",xlab = "Global Active Power (kilowatts)")
 dev.off()

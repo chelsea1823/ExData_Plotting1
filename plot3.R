@@ -5,7 +5,7 @@ names(data) <- header
 datetime <- strptime(paste(data$Date, data$Time, sep =" "), format="%d/%m/%Y %H:%M:%S")
 
 # plot 
-png("plot3.png")
+png("plot3.png", width=480, height=480)
 plot(datetime, data$Sub_metering_1, type="l", ylab = "Energy sub metering", xlab = NA)
 lines(datetime, data$Sub_metering_2, type="l", col="red" )
 lines(datetime, data$Sub_metering_3, type="l", col="blue" )

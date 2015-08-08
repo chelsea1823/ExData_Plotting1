@@ -4,7 +4,7 @@ data <- read.table("household_power_consumption.txt",sep = ";", header = FALSE, 
 names(data) <- header
 datetime <- strptime(paste(data$Date, data$Time, sep =" "), format="%d/%m/%Y %H:%M:%S")
 
-png("plot4.png")
+png("plot4.png", width=480, height=480)
 par(mfrow=c(2,2))
 # plot a 
 plot(datetime, data$Global_active_power,type = "l", ylab = "Global Active Power", xlab = NA)
